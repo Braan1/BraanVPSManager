@@ -66,7 +66,7 @@ setup_domain() {
 
 # Update system packages
 update_system() {
-    log_info "Updating system..."
+    log_info "Please wait updating system. Do not exit..."
     apt update -y > /dev/null 2>&1 && apt dist-upgrade -y > /dev/null 2>&1
     if [[ $? -ne 0 ]]; then 
         log_error "System update failed."
@@ -348,8 +348,8 @@ main() {
     final_cleanup
     
     # Installation complete
-    log_success "Installation complete."
-    log_success "Run '${green}braanvpsmanager${nc}' or '${green}bvm${nc}' to start."
+    log_success "BraanVPSManager Installation complete."
+    log_success "Run '${yellow}braanvpsmanager${nc}' or '${yellow}bvm${nc}' to start."
 }
 
 # Execute main function
