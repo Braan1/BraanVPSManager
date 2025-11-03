@@ -26,7 +26,7 @@ log_warning() { echo -e "${yellow}[ Warning ]${nc} $1"; }
 # Check if script is run as root
 check_root() {
     if [ "$(id -u)" -ne 0 ]; then
-        log_error "Run as root.Type sudo su then enter and run the script again"
+        log_error "Run as root.Type sudo su,enter and run the script again"
         exit 1
     fi
 }
@@ -348,7 +348,7 @@ main() {
     final_cleanup
     
     # Installation complete
-    log_success "BraanVPSManager Installation complete."
+    log_success "BraanVPSManager Installation complete 💯."
     log_success "Run '${yellow}braanvpsmanager${nc}' or '${yellow}bvm${nc}' to start."
 }
 
